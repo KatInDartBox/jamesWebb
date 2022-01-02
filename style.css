@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Nova Mono", monospace;
+}
+body {
+  margin: 0;
+  background: #2b3c5c;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.svgWrapper {
+  max-width: 540px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  height: 100vh;
+  z-index: -1;
+}
+#background {
+  position: absolute;
+  bottom: -32px;
+}
+#rocket {
+  width: 20%;
+  position: absolute;
+  bottom: -112px;
+  left: calc(50% - 50px);
+}
+#building {
+  width: 10%;
+  position: absolute;
+  bottom: 72px;
+  left: calc(50% - 58px);
+}
+.countDown {
+  position: absolute;
+  font-size: 7rem;
+  color: #aaaaa8;
+  top: calc(50% - 4.5rem);
+  text-shadow: 0 0 9px black;
+}
+.button {
+  margin-top: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #0670b2;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 2.5px solid #ffffff00;
+  color: #a2a5a7;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.button:focus {
+  border: 2.5px solid #3a90c5;
+}
+.button:disabled,
+.button[disabled] {
+  border-color: #959595;
+  background: #808080;
+  color: #639;
+  cursor: initial;
+}
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+.smoke {
+  animation: aniSmoke 1.5s ease-out infinite;
+  transform-origin: center bottom;
+  transform-box: fill-box;
+  opacity: 0;
+  transform: scale(0);
+}
+
+@keyframes aniSmoke {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.flame {
+  animation: aniFlame 1s ease-out infinite;
+  transform-origin: center top;
+  transform-box: fill-box;
+  opacity: 0;
+  transform: scale(0);
+}
+@keyframes aniFlame {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.rocketWrapper {
+  animation: aniRocketWrapper 15s ease-out forwards;
+  transform-origin: center bottom;
+  transform-box: fill-box;
+  transform: translateY(0);
+}
+
+@keyframes aniRocketWrapper {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-100vh - 240px));
+  }
+}
