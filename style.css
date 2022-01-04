@@ -25,17 +25,17 @@ body {
   height: 100vh;
   z-index: -1;
 }
-#background {
+#svgBackground {
   position: absolute;
-  bottom: -32px;
+  bottom: -36px;
 }
-#rocket {
+#svgRocket {
   width: 20%;
   position: absolute;
   bottom: -112px;
   left: calc(50% - 50px);
 }
-#building {
+#svgBuilding {
   width: 10%;
   position: absolute;
   bottom: 72px;

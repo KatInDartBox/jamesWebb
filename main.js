@@ -2,7 +2,7 @@ const elmSmokeWrapper = document.getElementById("smoke");
 const elmFlameWrapper = document.getElementById("flame");
 const elmCountDown = document.querySelector(".countDown");
 const elmLaunchBtn = document.querySelector(".button");
-const elmRocketWrapper = document.getElementById("rocket");
+const elmRocketWrapper = document.getElementById("svgRocket");
 
 // setStyle(elmSmokeWrapper, { visibility: "hidden" });
 
@@ -75,7 +75,7 @@ function handleAddSmoke() {
       smoke.classList.add("smoke");
     }
     smokeCounter--;
-  }, 330);
+  }, 80);
 }
 
 function handleInitFlame() {
